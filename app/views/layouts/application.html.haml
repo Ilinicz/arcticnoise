@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title= @title || "ArcticNoise"
+    %meta(http-equiv="content-type" content="text/html" charset="utf-8")
+    %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
+    %meta(name='robots' content='all')
+    %meta(name='keywords' content='фотосъемка в москве, видеосъемка в москве, видеооператор, фотограф, снять клип, репортаж, видео, фото, Григорий Чернявский')
+    %meta(name="description" content="Вебсайт и портфолио Григория Чернявского - клипмейкера, видеооператора, фотографа. Незаурядная фото- и видеосъемка в Москве.")
+    %meta(name="author" content="Винцент Илинич")
+
+
+    -# Standard viewport tag to set the viewport to the device's width,
+    -# Android 2.3 devices need this so 100% width works properly and
+    -# doesn't allow children to blow up the viewport width
+    %meta{content: "initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width", name: "viewport"}
+
+    -# Fix for iPhone 5 fullscreen web apps
+    %meta(name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)")
+    %meta(name='apple-mobile-web-app-capable' content='yes')
+    %meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+    = favicon_link_tag 'favicon.ico'
+    = favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png'
+
+  
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true 
+    %link{:href => "http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css", :rel => "stylesheet"}
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags 
+
+%body
+  #layout.pure-g
+    = render 'layouts/sidebar'
+    .content.pure-u-1.pure-u-md-5-6.fadein
+      = yield
+    .pure-u-1
+      = render 'layouts/footer' 
+

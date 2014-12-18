@@ -1,0 +1,8 @@
+%section.intro
+  %video#video_background.fadein(loop){:autoplay => "true", :muted => "muted", :preload => "auto", :volume => "0"}
+    %source{:src => asset_path("vid1.webm"), :type => "video/webm"}
+    %source{:src => asset_path("vid1.mp4"), :type => "video/mp4"}
+    Video not supported
+
+  /= video_tag ["vid1.webm","vid1.mp4"], autoplay: true, class: 'fadein', id:"video_background", loop:"loop", preload: 'auto', muted: 'muted', volume: 0;
+  #video_pattern

@@ -1,0 +1,4 @@
+- @videos.each do |video|
+  .video-container.element
+    -#%iframe{:allowfullscreen => "", :frameborder => "0", :src => "#{video.url}"}
+    =(video.url).html_safe

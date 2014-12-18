@@ -1,0 +1,30 @@
+// Place all the styles related to the Videos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+video#video_background {
+position: fixed;
+bottom: 0;
+right: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+//background-image: image-url("dog.jpg");
+background-size: cover;
+//overflow: hidden;
+}
+
+#video_pattern {
+background: image-url("pattern.png");
+//background-size: cover;
+position: fixed;
+opacity: 0.8;
+left: 0px;
+top: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+}

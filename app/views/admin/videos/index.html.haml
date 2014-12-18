@@ -1,0 +1,28 @@
+%h1 Listing videos
+
+%table.pure-table
+  %thead
+    %tr
+      %th №
+      %th URL
+      %th Category
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @videos.each do |video|
+      %tr.pure-table-odd
+        %td= video.id
+        %td= video.url
+        %td= video.category
+        %td
+          = link_to video.url,'data-lightbox'=>"#{video.url}", class: 'pure-button button-xsmall' do
+            Показать
+
+        %td= link_to 'Изменить', edit_video_path(video), class: 'pure-button button-xsmall'
+        %td= link_to 'Удалить', video, :method => :delete, :data => { :confirm => 'Уверен?' }, class: 'pure-button button-xsmall'
+
+%br
+
+= link_to 'Добавить видео', new_video_path, class: 'pure-button'

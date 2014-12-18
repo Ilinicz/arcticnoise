@@ -1,0 +1,20 @@
+= form_for @video do |f|
+  - if @video.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@video.errors.count, "error")} prohibited this video from being saved:"
+      %ul
+        - @video.errors.full_messages.each do |msg|
+          %li= msg
+  .pure-form.pure-form-aligned
+    .pure-control-group
+      = f.label :url
+      = f.text_field :url, class: 'pure-input-2-3'
+    .pure-control-group
+      = f.label :category
+      = f.select :category, Video::CATEGORIES
+    .pure-controls 
+      = button_tag type: 'submit', class: 'pure-button pure-button-primary' do 
+        %i.fa.fa-check-square-o
+        Сохранить
+  %hr
+        
