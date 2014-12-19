@@ -21,7 +21,7 @@ gem 'bourbon'
 gem 'clrs'
 gem "font-awesome-rails"
 gem "pure-css-rails"
-
+gem "colorbox-rails"
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 

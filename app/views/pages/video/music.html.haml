@@ -1,8 +1,8 @@
-%h1 Music
+- @title="Видеоработы ~ Музыка"
+- @body_class="video-music"
 
-- @videos.each do |video|
-  %ul 
-    Video info:
-    %li Url: #{video.url}
-    %li Category: #{video.category}
-    %hr
+%section.video-section
+  %h4.section-name Видеоработы/музыка
+
+  #container
+    = render partial: "video_element", object: @videos

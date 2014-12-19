@@ -1,7 +1,8 @@
-%h1 Promotion
-- @videos.each do |video|
-  %ul 
-    Video info:
-    %li Url: #{video.url}
-    %li Category: #{video.category}
-    %hr
+- @title="Видеоработы ~ Промо"
+- @body_class="video-promo"
+
+%section.video-section
+  %h4.section-name Видеоработы/промо
+
+  #container
+    = render partial: "video_element", object: @videos

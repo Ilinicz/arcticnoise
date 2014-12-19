@@ -1,7 +1,13 @@
-%h1 All videos
-- @videos.each do |video|
-  %ul 
-    Video info:
-    %li Url: #{video.url}
-    %li Category: #{video.category}
-    %hr
+- @title = "Видеоработы"
+- @body_class = "index"
+
+%section.photo-section
+  %h4.section-name Видеоработы
+  %h4.section-name Выберите категорию:
+
+  %ul
+    %li=link_to 'Модельные тесты, видеопортреты', '/video/portrait'
+    %li=link_to 'Музыка', '/video/music'
+    %li=link_to 'Промо', '/video/promotion' 
+    %li=link_to 'Спорт', '/video/sport' 
+    %li=link_to 'Социальные', '/video/social' 

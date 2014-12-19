@@ -10,15 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *
  *= require_self
 
  */
 @import 'bourbon';
-@import 'pure';
-@import 'lib/lightbox';
-//@import 'lib/screen';
-@import "font-awesome";
 @import 'clrs';
+@import 'pure';
+//@import 'colorbox-rails';
+@import "font-awesome";
+@import 'colorbox';
 @import 'sidebar';
 @import 'sections';
 @import 'video';
@@ -117,7 +118,7 @@ footer {
     @include transition (all 0.5s ease-in-out);
     &:hover{
       color: $gray; 
-      text-shadow: 1px 0 5px $gray;
+      text-shadow: 1px 1px 10px $gray;
       text-decoration: none;
     }
   }

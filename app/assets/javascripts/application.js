@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require colorbox-rails
 //= require_tree .
 //= require turbolinks
 

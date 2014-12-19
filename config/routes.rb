@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  
+
+  
+
  #get 'pages/photo'
 
  #get 'pages/video'
 
   namespace :admin, as: ' ' do
     resources :videos 
+    resources :photos
   end
 
   get "/*id" => 'pages#show', as: :page, format: false

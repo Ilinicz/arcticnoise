@@ -1,16 +1,3 @@
-$(window).load ->
-  container = document.querySelector("#container")
-  msnry = undefined
-
-  # initialize Masonry after all images have loaded
-  imagesLoaded container, ->
-  msnry = new Masonry(container,
-    itemSelector: '.element'
-    columnWidth: container.width / 4
-    gutter: 0
-    )
-  return
-
 $(document).ready ->
   #$("html, #sidebar").niceScroll
   #  cursorcolor: "#ffffff"
@@ -19,6 +6,23 @@ $(document).ready ->
   #  cursorfixedheight: 100
   #  autohidemode: false
   #  zindex: 9999
+
+  $container = $('#container')
+  $container.imagesLoaded ->
+    $container.masonry
+      itemSelector: '.element'
+      columnWidth: $('#container').width / 3
+      gutter: 0
+
+  $('a.portrait').colorbox
+    rel: 'portrait'
+    #transition: "fade"
+    speed: 500;
+    current: "{current} из {total}"
+    initialWidth: 200
+    initialHeight: 200
+    maxWidth: "98%"
+    maxHeight: "96%"
 
   $('.fadein').addClass 'load'
   

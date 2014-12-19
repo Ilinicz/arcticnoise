@@ -47,6 +47,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    colorbox-rails (0.1.2)
+      jquery-rails
+      rails (>= 3.1.1)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -172,6 +175,7 @@ DEPENDENCIES
   bourbon
   clrs
   coffee-rails (~> 4.0.0)
+  colorbox-rails
   font-awesome-rails
   haml-rails
   high_voltage (~> 2.2.1)
