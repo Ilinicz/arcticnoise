@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
   
-
-  
-
- #get 'pages/photo'
-
- #get 'pages/video'
-
   namespace :admin, as: ' ' do
     resources :videos 
     resources :photos
+  end
+  
+  %w( 404 422 500 ).each do |code|
+    get code, to: 'errors#show', code: code
   end
 
   get "/*id" => 'pages#show', as: :page, format: false

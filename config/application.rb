@@ -23,5 +23,7 @@ module Arcticnoise
     config.time_zone = 'Moscow'
     
     config.generators.test_framework = false
+
+    config.exeptions_app = self.routes
   end
 end
