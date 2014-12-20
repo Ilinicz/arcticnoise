@@ -33,5 +33,4 @@ $(document).ready ->
     speed: 300
     ease: "linear"
 
-  Turbolinks.enableTransitionCache()
- 
+  
