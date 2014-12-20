@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   
-  devise_for :admins
+  devise_for :admins, path: '/', path_names: {sign_in: 'login', sign_out: 'logout'}, skip: [:registrations, :passwords]
   
   root to: 'pages#show', id: 'home'
 
   namespace :admin, as: ' ' do
     get '/', to: "base#index"
+    
     resources :videos
     resources :photos
   end

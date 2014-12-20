@@ -1,4 +1,6 @@
-.admin-section.bg-lime
+- @body_class = 'bg-lime'
+.admin-section
+  %strong#notice= notice
   %h1 Добавление видео
   %p 
     В качестве URL вставляй полный фрейм, скопированный прямо из ютуба! Например:
@@ -7,4 +9,4 @@
   
   = render 'form'
   
-  = link_to "<i class='fa fa-arrow-left'></i> К списку видео".html_safe, videos_path, class: 'pure-button'
+  = link_to "<i class='fa fa-arrow-left'></i> К списку всех видео".html_safe, videos_path, class: 'pure-button'

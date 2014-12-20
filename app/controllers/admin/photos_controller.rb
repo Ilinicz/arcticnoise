@@ -28,7 +28,7 @@ class Admin::PhotosController < Admin::BaseController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to new_photo_path, notice: 'Фото было успешно создано! Добавим еще?' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }

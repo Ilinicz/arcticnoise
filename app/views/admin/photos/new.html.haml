@@ -1,6 +1,8 @@
-.admin-section.bg-yellow
+- @body_class = 'bg-yellow'
+.admin-section
+  %strong#notice= notice
   %h1 Добавление фото
   
   = render 'form'
   
-  = link_to "<i class='fa fa-arrow-left'></i> Назад".html_safe, photos_path, class: 'pure-button'
+  = link_to "<i class='fa fa-arrow-left'></i> К списку всех фото".html_safe, photos_path, class: 'pure-button'

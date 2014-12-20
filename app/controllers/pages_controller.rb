@@ -9,11 +9,11 @@ class PagesController < ApplicationController
 
 
   def get_video(category)
-    @videos = Video.where(category: category)
+    @videos = Video.where(category: category).order("updated_at DESC")
   end
 
   def get_photo(category)
-    @photos = Photo.where(category: category)
+    @photos = Photo.where(category: category).order("updated_at DESC")
   end
 
   def get_category_and_data

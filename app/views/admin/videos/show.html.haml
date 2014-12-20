@@ -1,9 +1,16 @@
-%p#notice= notice
+- @body_class = 'bg-gray'
+.admin-section
+  %strong#notice= notice
 
-%p
-  %b Url:
-  = @video.url
-
-= link_to "<i class='fa fa-arrow-left'></i> Назад".html_safe, videos_path, class: 'pure-button'
-= link_to "<i class='fa fa-edit'></i> Изменить".html_safe, edit_video_path(@video), class: 'pure-button'
+  %p
+    %b Url:
+    = @video.url
+  %p 
+    %b Категория:
+    = @video.category  
+  %p= (@video.url).html_safe
+  
+  
+  = link_to "<i class='fa fa-arrow-left'></i> Назад".html_safe, videos_path, class: 'pure-button'
+  = link_to "<i class='fa fa-edit'></i> Изменить".html_safe, edit_video_path(@video), class: 'pure-button'
 

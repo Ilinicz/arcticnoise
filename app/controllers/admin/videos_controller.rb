@@ -15,7 +15,6 @@ class Admin::VideosController < Admin::BaseController
 
   # GET /videos/new
   def new
-    @categories = %w{portrait music promotion sport social}
     @video = Video.new
   end
 
@@ -30,7 +29,7 @@ class Admin::VideosController < Admin::BaseController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
+        format.html { redirect_to new_video_path, notice: 'Видео было успешно создано! Добавим еще?' }
         format.json { render :show, status: :created, location: @video }
       else
         format.html { render :new }
