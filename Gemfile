@@ -5,7 +5,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
-gem 'html2haml'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,6 +33,8 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'sqlite3', '1.3.10'   
+  gem 'html2haml'
+  gem "erb2haml"
 end 
 
 group :production do

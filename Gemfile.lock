@@ -59,6 +59,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     execjs (2.2.2)
     font-awesome-rails (4.2.0.0)
@@ -190,6 +192,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   colorbox-rails
   devise
+  erb2haml
   font-awesome-rails
   haml-rails
   high_voltage (~> 2.2.1)

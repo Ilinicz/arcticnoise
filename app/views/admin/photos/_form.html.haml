@@ -14,7 +14,7 @@
       = f.label :category, "Категория"
       = f.select :category, Photo::CATEGORIES
     .pure-controls 
-      = button_tag type: 'submit', class: 'pure-button pure-button-primary' do 
+      = button_tag type: 'submit', class: 'pure-button' do 
         %i.fa.fa-check-square-o
-        Сохранить
+        %strong Сохранить
   %hr

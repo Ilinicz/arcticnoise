@@ -1,0 +1,27 @@
+
+.pure-u-5-24
+.pure-u-13-24.admin-section.bg-red
+  %h2 Вход
+  %hr
+  = form_for(resource, as: resource_name, url: session_path(resource_name),html: {class:"pure-form pure-form-stacked"}) do |f|
+
+    .pure-control-group  
+      = f.label :email
+      = f.email_field :email, autofocus: true
+    .pure-control-group
+      = f.label :password
+      = f.password_field :password, autocomplete: "off"
+    .pure-controls
+      - if devise_mapping.rememberable? 
+        = f.label :remember_me, class: 'pure-checkbox' do 
+          = f.check_box :remember_me
+          %small Запомнить
+          
+        
+          
+      = button_tag type: 'submit', class: 'pure-button' do 
+        %i.fa.fa-sign-in
+        Войти 
+        
+  %hr
+  -#= render "devise/shared/links"

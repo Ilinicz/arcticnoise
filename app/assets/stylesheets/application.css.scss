@@ -25,7 +25,9 @@
 @import 'video';
 @import 'fadein';
 
-
+html {
+  //background-color: $black;
+}
 
 body {
     font-family: $monospace;
@@ -142,7 +144,7 @@ footer {
   &:hover {
     border-width: 2em 4em 0 0;
     color: #fff;
-    border-color: transparent rgba(208, 2, 26, 1) transparent transparent;
+    border-color: transparent #FF4136 transparent transparent;
   }
 
 }
@@ -252,6 +254,8 @@ body.photo-sport {
 
 .admin-section {
   padding: 5%;
-  padding-bottom: 50%;
-  background-color: $aqua;
+  height: 100%;
+  min-height: 100vh;
+  //background-color: $aqua;
 }
+
