@@ -1,23 +1,29 @@
-%h1 Listing photos
-
-%table
-  %thead
-    %tr
-      %th Url
-      %th Category
-      %th
-      %th
-      %th
-      
-  %tbody
-    - @photos.each do |photo|
+%section.admin-section
+  %h1 Все фото
+  
+  %table.pure-table
+    %thead
       %tr
-        %td= photo.url
-        %td= photo.category
-        %td= link_to 'Show', photo
-        %td= link_to 'Edit', edit_photo_path(photo)
-        %td= link_to 'Destroy', photo, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th №
+        %th URL
+        %th Категория
+        %th
+        %th
+        %th
+        
+    %tbody
+      - @photos.each do |photo|
+        %tr.pure-table-odd
+          %td= photo.id
+          %td= photo.url
+          %td= photo.category
+          %td
+            = link_to photo.url, data: {colorbox: "true", colorbox_max_height:"90%"},class: 'pure-button button-xsmall' do
+              Показать
 
-%br
+          %td= link_to 'Изменить', edit_photo_path(photo), class: 'pure-button button-xsmall'
+          %td= link_to 'Удалить', photo, :method => :delete, :data => { :confirm => 'Уверен?' }, class: 'pure-button button-xsmall'
 
-= link_to 'New Photo', new_photo_path
+  %br
+  
+  = link_to 'Добавить фото', new_photo_path, class: 'pure-button'

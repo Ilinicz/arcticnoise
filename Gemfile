@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 #stuff
+gem 'devise'
 gem 'high_voltage', '~> 2.2.1'
 gem 'r18n-rails'
 gem 'rails-timeago', '~> 2.0'

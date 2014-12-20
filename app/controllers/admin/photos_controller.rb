@@ -1,4 +1,4 @@
-class Admin::PhotosController < ApplicationController
+class Admin::PhotosController < Admin::BaseController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /photos

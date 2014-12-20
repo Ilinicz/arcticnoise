@@ -1,12 +1,14 @@
-%p#notice= notice
-
-%p
-  %b Url:
-  = @photo.url
-%p
-  %b Category:
-  = @photo.category
-
-= link_to 'Edit', edit_photo_path(@photo)
-\|
-= link_to 'Back', photos_path
+%section.admin-section  
+  %p#notice= notice
+  
+  %p
+    = image_tag @photo.url
+  %p
+    %b Url
+    = @photo.url
+  %p
+    %b Категория
+    = @photo.category
+  
+  = link_to "<i class='fa fa-arrow-left'></i> Назад".html_safe, photos_path, class: 'pure-button'
+  = link_to "<i class='fa fa-edit'></i> Изменить".html_safe, edit_photo_path(@photo), class: 'pure-button'

@@ -1,0 +1,9 @@
+- @title = 'Фотоработы ~ сцена'
+- @body_class = 'photo-scene'
+- @element_class = 'scene'
+
+%section.photo-section
+  %h4.section-name Фотоработы/сцена
+
+  #container
+    = render partial: "photo_element", object: [@photos, @element_class]

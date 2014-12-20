@@ -6,11 +6,15 @@
         - @photo.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :url
-    = f.text_field :url
-  .field
-    = f.label :category
-    = f.text_field :category
-  .actions
-    = f.submit 'Save'
+  .pure-form.pure-form-aligned
+    .pure-control-group
+      = f.label :url
+      = f.text_field :url, class: 'pure-input-2-3'
+    .pure-control-group
+      = f.label :category, "Категория"
+      = f.select :category, Photo::CATEGORIES
+    .pure-controls 
+      = button_tag type: 'submit', class: 'pure-button pure-button-primary' do 
+        %i.fa.fa-check-square-o
+        Сохранить
+  %hr

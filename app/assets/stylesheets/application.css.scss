@@ -59,7 +59,9 @@ h3 {
     font-weight: 100;
 }
 
-
+img {
+  @extend .pure-img;
+}
 
 /* LAYOUT CSS */
 .pure-img-responsive {
@@ -246,4 +248,10 @@ body.photo-sport {
 
 .pure-table {
   font-size: 80%;
+}
+
+.admin-section {
+  padding: 5%;
+  padding-bottom: 50%;
+  background-color: $aqua;
 }

@@ -14,8 +14,8 @@ $(document).ready ->
       columnWidth: $('#container').width / 3
       gutter: 0
 
-  $('a.portrait').colorbox
-    rel: 'portrait'
+  $('a.openbox').colorbox
+    rel: $('a.openbox').attr('class')
     #transition: "fade"
     speed: 500;
     current: "{current} из {total}"
@@ -25,6 +25,8 @@ $(document).ready ->
     maxHeight: "96%"
 
   $('.fadein').addClass 'load'
+
+  $("li.nav-item > a[href=\"" + @location.pathname + "\"]").parent().addClass "is-active"
   
   $.srSmoothscroll
     step: 55
