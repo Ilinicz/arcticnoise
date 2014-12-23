@@ -35,9 +35,10 @@
     = render 'layouts/sidebar'
     .content.pure-u-1.pure-u-md-5-6.fadein
       - if admin_signed_in?
-        .pure-u-5-24
-        .pure-u-13-24       
+        .pure-u-3-24
+        .pure-u-16-24       
           = link_to "Добавить фото", new_photo_path, class: "pure-button"
+          = link_to "Много фото в категорию", multiple_new_photo_path, class: "pure-button"
           = link_to "Добавить видео", new_video_path, class: "pure-button"
           = link_to "Выйти", destroy_admin_session_path,  method: :delete, class: "pure-button"
       = yield

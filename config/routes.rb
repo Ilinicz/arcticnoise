@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     get '/', to: "base#index"
     
     resources :videos
-    resources :photos
+    resources :photos do 
+      get 'multiple', on: :new
+      post 'create_multiple', on: :collection
+    end
   end
   
   %w( 404 422 500 ).each do |code|

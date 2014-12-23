@@ -9,7 +9,7 @@
         %th №
         %th URL
         %th Категория
-        %th
+        %th Дата
         %th
         %th
         
@@ -19,12 +19,12 @@
           %td= photo.id
           %td= photo.url
           %td= photo.category
+          %td= l (photo.created_at), format: :short
           %td
-            = link_to photo.url, data: {colorbox: "true", colorbox_max_height:"90%"},class: 'pure-button button-xsmall' do
-              Показать
+            = link_to photo.url, data: {colorbox: "true", colorbox_max_height:"90%"}, title: "Показать", style:"color:rgb(28, 184, 65);font-size:20px;" do
+              %i.fa.fa-eye
 
-          %td= link_to 'Изменить', edit_photo_path(photo), class: 'pure-button button-xsmall'
-          %td= link_to 'Удалить', photo, :method => :delete, :data => { :confirm => 'Уверен?' }, class: 'pure-button button-xsmall'
+          %td= link_to "<i class='fa fa-trash'></i>".html_safe, photo, :method => :delete, :data => { :confirm => 'Уверен?' }, title: "Удалить", style: "color:rgb(202, 60, 60);font-size:20px;"
 
   %br
   

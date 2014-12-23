@@ -233,7 +233,8 @@ body.photo-sport {
 }
 
 .button-xsmall {
-            font-size: 70%;
+  font-size: 70%;
+  padding: -10%;
 }
 
 .button-small {
@@ -247,6 +248,31 @@ body.photo-sport {
 .button-xlarge {
     font-size: 125%;
 }
+
+.button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: $green; /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: $orange; /* this is an orange */
+        }
+
+        .button-secondary {
+            background: $teal; /* this is a light blue */
+        }
 
 .pure-table {
   font-size: 80%;

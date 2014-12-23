@@ -17,6 +17,22 @@ class Admin::PhotosController < Admin::BaseController
     @photo = Photo.new
   end
 
+  def multiple
+    @photos = Photo.new
+    @counter = 1
+  end
+  
+  def create_multiple
+    photos = []
+
+    photos_params.each do |p|
+      photo = Photo.new(p) 
+      photos << photo if photo.save 
+    end
+    
+    redirect_to multiple_new_photo_path, notice: 'Фото были успешно созданы! Добавим еще?'
+  end
+
   # GET /photos/1/edit
   def edit
   end
@@ -25,7 +41,6 @@ class Admin::PhotosController < Admin::BaseController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
-
     respond_to do |format|
       if @photo.save
         format.html { redirect_to new_photo_path, notice: 'Фото было успешно создано! Добавим еще?' }
@@ -70,5 +85,11 @@ class Admin::PhotosController < Admin::BaseController
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
       params.require(:photo).permit(:url, :category)
+    end
+
+    def photos_params
+      params.require(:photos).map do |p|
+        ActionController::Parameters.new(p.to_hash).permit(:url).merge(category: params[:category])
+      end
     end
 end

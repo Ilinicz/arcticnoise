@@ -2,7 +2,11 @@
 .admin-section
   %strong#notice= notice
   %h1 Добавление фото
-  
+  %p 
+    Тут можно добавить одно фото в одну категорию
+    %br
+    %strong URL должен быть вида: http://cs406424.vk.me/v406424803/1913/ge7uPoxR7FQ.jpg
+
   = render 'form'
-  
-  = link_to "<i class='fa fa-arrow-left'></i> К списку всех фото".html_safe, photos_path, class: 'pure-button'
+  %br
+  = link_to "<i class='fa fa-arrow-left'></i> К списку всех фото".html_safe, photos_path,   class: 'pure-button'
